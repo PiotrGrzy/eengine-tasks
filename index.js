@@ -24,17 +24,25 @@ function countDown(time) {
 }
 
 function submitForm(e) {
-  e.preventDefault();
+  if (e) {
+    e.preventDefault();
+  }
+
+  button.textContent = 'wysyłanie';
+  button.disabled = true;
+  input.disabled = true;
+  //init(parseInt(input.value));
+
   console.log('form submit!');
 }
 
-const init = () => {
-  const seconds = getSecFromUrl() || 5;
+const init = inputSeconds => {
+  const seconds = inputSeconds || getSecFromUrl() || 5;
   countDown(seconds);
-  console.log(seconds);
-  setTimeout(submitForm, seconds * 1000);
-
+  button.disabled = false;
+  input.disabled = false;
   input.value = seconds;
+  setTimeout(submitForm, seconds * 1000);
 };
 
 window.onload = init;
