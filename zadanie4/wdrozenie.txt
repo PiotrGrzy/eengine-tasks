@@ -7,7 +7,7 @@ Opisany projekt, podzieliłbym na następujące komponenty:
         - informacje (cena, nazwa)
 
 Układ listy produktów oparłbym na gridzie. Aktualną ilość kolumn trzymałbym w stanie komponentu rodzicu.
-Zmieniana następowałaby poprzez komponent Button, i przekazywana do ListyProduktów poprzez propsy. 
+Zmiana następowałaby poprzez komponent Button, i przekazywana do ListyProduktów poprzez propsy. 
 
 Komponent Karuzela, stworzyłbym używając jednej z bibliotek, takich jak np "react-slick" lub "react-responsive-carousel".
 Przy takiej ilości produktów, w którym każdy ma posiadać własną karuzelę, wyświetlanych na raz, należy zwrócić uwagę na wydajność,
